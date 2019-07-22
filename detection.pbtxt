@@ -1,0 +1,33 @@
+item {
+	name: 'tree'
+	id: 1
+
+}
+
+item {
+  
+	name: 'rockBlock'
+	id: 2
+
+}
+
+item {
+	name: 'bush'
+	id: 3
+
+
+}
+
+
+
+item {
+	name: 'tree'
+	id: 4
+
+}
+
+item {
+	name: 'chest'
+	id: 5
+
+}
