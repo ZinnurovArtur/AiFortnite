@@ -58,5 +58,5 @@ def test(x2,y2):
     print("exit")
     sys.exit()
 
-dotrun(400,321)
+dotrun(383,321)
 #test(400,321)
