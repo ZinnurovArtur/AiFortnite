@@ -39,7 +39,7 @@ display_time = 2
 start_time = time.time()
 
 monitor = {"top": 80, "left": 0, "width": 840, "height": 640}
-width = 840
+width = 800
 height = 640
 
 
@@ -133,25 +133,18 @@ cap = cv2.imshow("winndowTest", printscreen_numpy)
 """
 
 def move(x,y):
-
     x = int(mid_x*width)
     y = int(mid_y*height+height/9)
-
     print(x, y)
     Dot.dotrun(x, y)
-
-    x1 = 400
-    y1 = 321
-
+    x1,y1 = win32api.GetCursorPos()
     x-=x1
     y-=y1
+    Keyboard.MouseMoveTo(int(x/2),int(y/2))
+    pyautogui.mouseUp(button="right")
+    pyautogui.click(button="left")
 
 
-
-
-
-    Keyboard.MouseMoveTo(x,y)
-    print(x, y)
    # if (x,y) != (400,321):
    # win32api.mouse_event(win32con.MOUSEEVENTF_MOVE |
                   #  win32con.MOUSEEVENTF_ABSOLUTE,int(x/width*65535.0),int(y/height*65535.0))
@@ -234,8 +227,8 @@ with detection_graph.as_default():
                 category_index,
                 use_normalized_coordinates=True,
                 min_score_thresh=0.90)
-            win32api.SetCursorPos((400,321))
-            print(win32api.GetCursorPos())
+            win32api.SetCursorPos((383,321))
+            #print(win32api.GetCursorPos())
 
 
 
