@@ -11,3 +11,6 @@ Python3.6
 
 Tensorflow-1.13
 
+Future TODO:
+
+Migrate to YOLOv3
